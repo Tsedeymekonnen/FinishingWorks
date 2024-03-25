@@ -81,7 +81,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<DesktopMain />} />
-      <Route path="/gallery" element={<gallery />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="/dashboard" element={<Dashboard />} />
