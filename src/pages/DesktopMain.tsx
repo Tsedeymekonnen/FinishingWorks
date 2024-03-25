@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 import FrameComponent3 from "../components/FrameComponent3";
 import RuleEvaluator from "../components/RuleEvaluator";
-import FrameComponent11 from "../components/FrameComponent1";
-import FrameComponent2 from "../components/FrameComponent";
-import GroupComponent1 from "../components/GroupComponent";
+import FrameComponent11 from "../components/FrameComponent11";
+import FrameComponent2 from "../components/FrameComponent4";
+import GroupComponent1 from "../components/GroupComponent1";
 import styles from "./DesktopMain.module.css";
 
 const DesktopMain: FunctionComponent = () => {

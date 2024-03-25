@@ -1,0 +1,77 @@
+.fyn,
+.valueComparatorIcon {
+  position: relative;
+  flex-shrink: 0;
+}
+.fyn {
+  width: 69.6px;
+  letter-spacing: 0.16px;
+  line-height: 25.2px;
+  display: inline-block;
+}
+.valueComparatorIcon {
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+  min-height: 24px;
+}
+.inputHandler,
+.outputProcessor {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.outputProcessor {
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.inputHandler {
+  height: 24px;
+  justify-content: flex-end;
+  padding: var(--padding-0) var(--padding-lg) var(--padding-0)
+    var(--padding-lgi);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--material-2-title-size);
+  color: var(--color-gray-100);
+  font-family: var(--font-lora);
+}
+.dataSplitterIcon {
+  height: 206px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.errorHandlerIcon {
+  height: 2px;
+  width: 74px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: 14px;
+  left: calc(50% - 37px);
+  z-index: 1;
+}
+.logicTree,
+.loopController {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.loopController {
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}
+.logicTree {
+  height: 246px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--gap-base);
+}

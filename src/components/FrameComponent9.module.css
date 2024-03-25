@@ -1,0 +1,29 @@
+.functionScope {
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-xl);
+}
+.decisionMaker,
+.functionScope,
+.treeTraverser {
+  display: flex;
+  align-items: flex-start;
+}
+.decisionMaker {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-9xl);
+}
+.treeTraverser {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: var(--padding-0) var(--padding-28xl) var(--padding-4xl)
+    var(--padding-29xl);
+  text-align: left;
+  font-size: var(--material-2-overline-size);
+  color: var(--light-primary);
+  font-family: var(--material-2-secondary-text);
+}

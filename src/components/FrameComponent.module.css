@@ -125,7 +125,7 @@
 }
 .galleryInner {
   align-self: stretch;
-  padding: 0 var(--padding-xl) 45.10000000000037px;
+  padding: var(--padding-0) var(--padding-xl) 45.10000000000037px;
   box-sizing: border-box;
   text-align: left;
   font-size: var(--font-size-xl);

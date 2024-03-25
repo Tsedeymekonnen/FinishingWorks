@@ -26,14 +26,15 @@
   filter: drop-shadow(0 34.2px 72.74px rgba(21, 21, 21, 0.15));
   flex-direction: row;
   align-items: center;
-  padding: 0;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-0);
   box-sizing: border-box;
 }
 .starsWrapper {
   align-self: stretch;
   flex-direction: column;
   align-items: flex-end;
-  padding: 0 0.1000000000021828px 0 0;
+  padding: var(--padding-0) 0.1000000000021828px var(--padding-0)
+    var(--padding-0);
 }
 .iWillLet {
   align-self: stretch;
@@ -90,7 +91,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 var(--padding-6xl) 34.900000000000546px;
+  padding: var(--padding-0) var(--padding-6xl) 34.900000000000546px;
   box-sizing: border-box;
   position: relative;
   gap: var(--gap-13xl);
