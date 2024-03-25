@@ -134,8 +134,6 @@ const DesktopMain: FunctionComponent = () => {
                   />
                   <img
                     className={styles.imageIcon5}
-                    rows={17}
-                    cols={18}
                     alt=""
                     src="/image5@2x.png"
                   />
