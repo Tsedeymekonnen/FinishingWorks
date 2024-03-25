@@ -1,60 +1,31 @@
 import { FunctionComponent } from "react";
-import FrameComponent2 from "./FrameComponent2";
 import styles from "./FrameComponent1.module.css";
 
 const FrameComponent1: FunctionComponent = () => {
   return (
-    <section className={styles.desktopMainInner}>
-      <div className={styles.rectangleParent}>
-        <div className={styles.frameChild} />
-        <div className={styles.frameWrapper}>
-          <div className={styles.whatOurClientsSayParent}>
-            <div className={styles.whatOurClients}>What Our Clients Say</div>
-            <div className={styles.frameContainer}>
-              <FrameComponent2
-                star2="/star-2.svg"
-                star3="/star-3.svg"
-                star4="/star-4.svg"
-                star5="/star-5.svg"
-                star6="/star-6.svg"
-                iWillLetMyMumKnowAboutThi="I will let my mum know about this, she could really make use of software! Very easy to use. Since I invested in software I made over 100,000 dollars profits. I just can't get enough of software. I want to get a T-Shirt with software on it so I can show it off to everyone."
-                samri="Samri"
-                ellipse1="/ellipse-1@2x.png"
-              />
+    <section className={styles.galleryInner}>
+      <div className={styles.designShowcaseOneParent}>
+        <b className={styles.designShowcaseOneContainer}>
+          <span>{` Design `}</span>
+          <span className={styles.showcaseOne}>Showcase one</span>
+        </b>
+        <div className={styles.frameParent}>
+          <div className={styles.imageParent}>
+            <div className={styles.image}>
+              <div className={styles.ceramicShowcase}>Ceramic Showcase</div>
+            </div>
+            <div className={styles.image1}>
+              <div className={styles.ceramicSymmetry}>Ceramic Symmetry</div>
             </div>
           </div>
-        </div>
-        <div className={styles.frameParent}>
-          <FrameComponent2
-            star2="/star-2.svg"
-            star3="/star-3.svg"
-            star4="/star-4.svg"
-            star5="/star-5.svg"
-            star6="/star-6.svg"
-            iWillLetMyMumKnowAboutThi="Website design did exactly what you said it does. Just what I was looking for. Nice work on your website design."
-            samri="Robel Y"
-            ellipse1="/ellipse-1-1@2x.png"
-            propFlex="unset"
-            propMinHeight="257px"
-            propAlignSelf="stretch"
-            propLineHeight="unset"
-            propMinWidth="52px"
-          />
-          <FrameComponent2
-            star2="/star-2-2.svg"
-            star3="/star-3-2.svg"
-            star4="/star-4-2.svg"
-            star5="/star-5-2.svg"
-            star6="/star-6-2.svg"
-            iWillLetMyMumKnowAboutThi="If you want real marketing that works and effective implementation - mobile app's got you covered."
-            samri="Sol D"
-            ellipse1="/ellipse-1-2@2x.png"
-            propFlex="unset"
-            propMinHeight="257px"
-            propAlignSelf="stretch"
-            propLineHeight="unset"
-            propMinWidth="36px"
-          />
+          <div className={styles.imageGroup}>
+            <div className={styles.image2}>
+              <div className={styles.expertTouch}>Expert Touch</div>
+            </div>
+            <div className={styles.image3}>
+              <div className={styles.paintedPerfection}>Painted Perfection</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -108,7 +108,7 @@
 .frameContainer {
   width: 562px;
   justify-content: flex-start;
-  gap: 27px;
+  gap: var(--gap-8xl);
 }
 .frameWrapper {
   align-self: stretch;

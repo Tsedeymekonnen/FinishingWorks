@@ -9,7 +9,7 @@
   display: none;
 }
 .rectangle1 {
-  margin-top: -1.099999999999909px;
+  margin-top: -1.1000000000003638px;
   height: 1px;
   background-color: var(--color-gray-300);
   flex-shrink: 0;
@@ -27,13 +27,9 @@
   z-index: 1;
 }
 .aboutUs {
-  margin: 0;
   width: 133.2px;
   position: relative;
-  font-size: inherit;
   line-height: 39px;
-  font-weight: 400;
-  font-family: inherit;
   display: inline-block;
   z-index: 2;
 }
@@ -57,18 +53,14 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 31.700000000000273px;
+  gap: 31.699999999999815px;
   min-width: 265px;
   max-width: 100%;
 }
 .contactInfo {
-  margin: 0;
   width: 181.2px;
   position: relative;
-  font-size: inherit;
   line-height: 39px;
-  font-weight: 400;
-  font-family: inherit;
   display: inline-block;
   z-index: 2;
 }
@@ -119,7 +111,7 @@
   width: 349.2px;
   flex-direction: column;
   gap: 25.600000000000364px;
-  min-width: 349.2000000000007px;
+  min-width: 349.1999999999998px;
   color: var(--color-whitesmoke-100);
 }
 .frameDiv {
@@ -127,33 +119,31 @@
   flex-direction: row;
   gap: 68.39999999999964px;
 }
-.ourCompany {
-  margin: 0;
+.ourCompany,
+.testimonials {
   width: 200.4px;
   position: relative;
-  font-size: inherit;
   line-height: 39px;
-  font-weight: 400;
-  font-family: inherit;
   display: inline-block;
-  z-index: 2;
-}
-.contact,
-.testimonials {
-  position: relative;
-  line-height: 35px;
   z-index: 2;
 }
 .testimonials {
   width: 117px;
-  display: inline-block;
+  line-height: 35px;
+}
+.contact,
+.gallery {
+  position: relative;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
 }
 .contact {
   align-self: stretch;
+  line-height: 35px;
   white-space: pre-wrap;
+  z-index: 2;
 }
 .gallery {
-  position: relative;
   font-size: var(--material-2-title-size);
   line-height: 34.9px;
   display: inline-block;
@@ -166,14 +156,14 @@
   font-size: var(--font-size-mid);
 }
 .contactParent,
-.dataCollector,
-.ourCompanyParent {
+.ourCompanyParent,
+.testimonialsParent {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.dataCollector {
+.testimonialsParent {
   align-self: stretch;
   gap: var(--gap-12xs);
   font-size: var(--material-2-title-size);
@@ -201,9 +191,9 @@
   align-self: stretch;
   justify-content: flex-start;
 }
-.alignmentEngineIcon,
-.alignmentEngineIcon1,
-.alignmentEngineIcon2 {
+.frameIcon,
+.frameIcon1,
+.frameIcon2 {
   height: 18.5px;
   width: 21.6px;
   position: relative;
@@ -212,7 +202,7 @@
   min-height: 19px;
   z-index: 2;
 }
-.colorCoordinator {
+.frameParent1 {
   height: 18.5px;
   display: flex;
   flex-direction: row;
@@ -254,12 +244,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 123.09999999999992px 0 0.09999999999990904px;
+  padding: 123.09999999999944px 0 0.1000000000003638px;
   gap: 127.19999999999982px;
   flex-shrink: 0;
   debug_commit: f6aba90;
 }
-.layerLiaison {
+.subheader {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -279,16 +269,16 @@
   max-width: 100%;
   z-index: 3;
 }
-.layerLiaisonParent,
-.rectangleParent {
+.rectangleParent,
+.subheaderParent {
   align-self: stretch;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.layerLiaisonParent {
+.subheaderParent {
   flex-direction: row;
-  padding: 33.80000000000018px var(--padding-17xl) 31.799999999999727px;
+  padding: 33.80000000000018px var(--padding-17xl) 31.800000000000185px;
   position: relative;
   flex-shrink: 0;
   debug_commit: f6aba90;
@@ -298,19 +288,19 @@
 .rectangleParent {
   background-color: var(--color-midnightblue);
   flex-direction: column;
-  gap: 0.049999999999954525px;
+  gap: 0.0500000000001819px;
   max-width: 100%;
   text-align: left;
   font-size: var(--font-size-6xl);
   color: var(--white);
   font-family: var(--font-raleway);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1125px) {
   .frameGroup {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1025px) {
   .frameDiv {
     gap: 68.4px 34px;
   }

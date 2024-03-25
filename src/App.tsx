@@ -5,6 +5,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+import Gallery from "./pages/Gallery";
 import DesktopMain from "./pages/DesktopMain";
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/desktop-main":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -45,7 +50,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<DesktopMain />} />
+      <Route path="/" element={<Gallery />} />
+      <Route path="/desktop-main" element={<DesktopMain />} />
     </Routes>
   );
 }

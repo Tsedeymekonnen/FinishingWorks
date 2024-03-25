@@ -14,7 +14,7 @@ const GroupComponent: FunctionComponent = () => {
               <div className={styles.frameGroup}>
                 <div className={styles.frameDiv}>
                   <div className={styles.aboutUsParent}>
-                    <h3 className={styles.aboutUs}>About Us</h3>
+                    <div className={styles.aboutUs}>About Us</div>
                     <div className={styles.craftingExcellenceThroughContainer}>
                       <p className={styles.craftingExcellenceThrough}>
                         Crafting excellence through precision and passion, we
@@ -23,7 +23,7 @@ const GroupComponent: FunctionComponent = () => {
                     </div>
                   </div>
                   <div className={styles.contactInfoParent}>
-                    <h3 className={styles.contactInfo}>Contact Info</h3>
+                    <div className={styles.contactInfo}>Contact Info</div>
                     <div className={styles.rdFloorSomewhereAddisAbabParent}>
                       <div className={styles.rdFloorSomewhere}>
                         3rd Floor somewhere, Addis Ababa
@@ -34,8 +34,8 @@ const GroupComponent: FunctionComponent = () => {
                   </div>
                 </div>
                 <div className={styles.ourCompanyParent}>
-                  <h3 className={styles.ourCompany}>Our Company</h3>
-                  <div className={styles.dataCollector}>
+                  <div className={styles.ourCompany}>Our Company</div>
+                  <div className={styles.testimonialsParent}>
                     <div className={styles.testimonials}>Testimonials</div>
                     <div className={styles.contactParent}>
                       <div className={styles.contact}>{`Contact     `}</div>
@@ -45,21 +45,21 @@ const GroupComponent: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.colorCoordinator}>
+            <div className={styles.frameParent1}>
               <img
-                className={styles.alignmentEngineIcon}
+                className={styles.frameIcon}
                 loading="lazy"
                 alt=""
                 src="/frame-1.svg"
               />
               <img
-                className={styles.alignmentEngineIcon1}
+                className={styles.frameIcon1}
                 loading="lazy"
                 alt=""
                 src="/frame-2.svg"
               />
               <img
-                className={styles.alignmentEngineIcon2}
+                className={styles.frameIcon2}
                 loading="lazy"
                 alt=""
                 src="/frame-3.svg"
@@ -69,8 +69,8 @@ const GroupComponent: FunctionComponent = () => {
         </div>
         <div className={styles.rectangle3} />
       </div>
-      <div className={styles.layerLiaisonParent}>
-        <div className={styles.layerLiaison} />
+      <div className={styles.subheaderParent}>
+        <div className={styles.subheader} />
         <div className={styles.copyright2024}>
           Copyright © 2024 FYN finishing work
         </div>
