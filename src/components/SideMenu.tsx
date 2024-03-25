@@ -13,7 +13,7 @@ const SideMenu: FunctionComponent = () => {
             className={styles.setting1Icon}
             loading="lazy"
             alt=""
-            src="/setting-1.svg"
+            src="/setting-11.svg"
           />
         </div>
         <h2 className={styles.dashboard}>Dashboard</h2>
@@ -28,7 +28,7 @@ const SideMenu: FunctionComponent = () => {
               className={styles.icon24OutlineKeySqua}
               loading="lazy"
               alt=""
-              src="/icon--24--outline--keysquare.svg"
+              src="/icon--24--outline--keysquare1.svg"
             />
             <div className={styles.dashboard1}>Dashboard</div>
           </div>
@@ -59,7 +59,7 @@ const SideMenu: FunctionComponent = () => {
       </div>
       <div className={styles.frameDiv}>
         <div className={styles.ellipseParent}>
-          <img className={styles.frameItem} alt="" src="/ellipse-8@2x.png" />
+          <img className={styles.frameItem} alt="" src="/ellipse-81@2x.png" />
           <div className={styles.frameWrapper1}>
             <div className={styles.frameParent1}>
               <div className={styles.abebeWrapper}>
@@ -73,7 +73,7 @@ const SideMenu: FunctionComponent = () => {
           <img
             className={styles.chevronDown2Icon}
             alt=""
-            src="/chevrondown-2.svg"
+            src="/chevrondown-21.svg"
           />
         </div>
       </div>

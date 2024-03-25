@@ -258,7 +258,7 @@ const Product: FunctionComponent = () => {
                 className={styles.frameIcon}
                 loading="lazy"
                 alt=""
-                src="/frame2.svg"
+                src="/frame21.svg"
               />
             </div>
             <div className={styles.totalGalleryParent}>

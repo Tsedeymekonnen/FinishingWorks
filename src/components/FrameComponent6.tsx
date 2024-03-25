@@ -8,7 +8,7 @@ const FrameComponent6: FunctionComponent = () => {
         <img
           className={styles.mapsZoomLevels2City}
           alt=""
-          src="/maps--zoom-levels--2-city@2x.png"
+          src="/maps--zoom-levels--2-city1@2x.png"
         />
         <div className={styles.controlsGoogleLogoColorParent}>
           <img

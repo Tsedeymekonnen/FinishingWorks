@@ -645,7 +645,7 @@
     flex-wrap: wrap;
   }
   .desktopMainInner {
-    padding-bottom: 67px;
+    padding-bottom: var(--padding-48xl);
     box-sizing: border-box;
   }
 }
