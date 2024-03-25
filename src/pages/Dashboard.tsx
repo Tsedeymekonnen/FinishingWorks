@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import FrameComponent5 from "../components/FrameComponent5";
 import styles from "./Dashboard.module.css";
+import { Link } from "react-router-dom";
 
 const Dashboard: FunctionComponent = () => {
   return (
@@ -35,7 +36,7 @@ const Dashboard: FunctionComponent = () => {
                 src="/icon--24--outline--keysquare.svg"
               />
               <div className={styles.dashboardWrapper}>
-                <div className={styles.dashboard2}>Dashboard</div>
+                <div className={styles.dashboard2}><Link to={"/dashboard1"}>Dashboard</Link></div>
               </div>
             </div>
           </div>
@@ -114,7 +115,7 @@ const Dashboard: FunctionComponent = () => {
                 src="/icon--24--outline--keysquare.svg"
               />
               <div className={styles.dashboardContainer}>
-                <div className={styles.dashboard4}>Dashboard</div>
+                <div className={styles.dashboard4}><Link to={"/dashboard1"}>Dashboard</Link></div>
               </div>
             </div>
           </div>

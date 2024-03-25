@@ -5,6 +5,7 @@ import FrameComponent11 from "../components/FrameComponent11";
 import FrameComponent2 from "../components/FrameComponent4";
 import GroupComponent1 from "../components/GroupComponent1";
 import styles from "./DesktopMain.module.css";
+import {Link} from "react-router-dom";
 
 const DesktopMain: FunctionComponent = () => {
   return (
@@ -31,13 +32,14 @@ const DesktopMain: FunctionComponent = () => {
               <div className={styles.frameWrapper}>
                 <div className={styles.frameContainer}>
                   <div className={styles.homeWrapper}>
-                    <div className={styles.home}>HOME</div>
+                    <div className={styles.home}><Link to={"/"}>HOME</Link></div>
                   </div>
                   <div className={styles.galleryWrapper}>
-                    <div className={styles.gallery}>GALLERY</div>
+                    <div className={styles.gallery}><Link to={"/gallery"}>GALLERY</Link></div>
                   </div>
-                  <div className={styles.service}>SERVICE</div>
-                  <div className={styles.testimonials}>TESTIMONIALS</div>
+                  <div className={styles.service}><Link to={"/service"}>SERVICE</Link></div>
+                  <div className={styles.testimonials}><Link to={"/testimonials"}>TESTIMONIALS</Link></div>
+                  <div className={styles.dashboard}><Link to={"/dashboard1"}>DASHBOARD</Link></div>
                 </div>
               </div>
               <div className={styles.frameDiv}>
@@ -46,7 +48,7 @@ const DesktopMain: FunctionComponent = () => {
                     <div className={styles.frameChild} />
                     <div className={styles.rectangleGroup}>
                       <div className={styles.frameItem} />
-                      <div className={styles.gallery1}>Gallery</div>
+                      <div className={styles.gallery1}><Link to={"/gallery"}>Gallery</Link></div>
                     </div>
                   </button>
                   <div className={styles.vectorWrapper}>
@@ -149,13 +151,13 @@ const DesktopMain: FunctionComponent = () => {
                   <div className={styles.pathBuilder}>
                     <RuleEvaluator title="Diverse Portfolio" />
                     <RuleEvaluator
-                      title="Experienced Team"
+                      // title="Experienced Team"
                       titleAlignSelf="stretch"
                       titleFlex="unset"
                     />
                     <div className={styles.iconLibrary}>
                       <RuleEvaluator
-                        title="Transparent Pricing"
+                        // title="Transparent Pricing"
                         titleAlignSelf="unset"
                         titleFlex="1"
                       />
@@ -164,7 +166,7 @@ const DesktopMain: FunctionComponent = () => {
                   <div className={styles.frameWrapper2}>
                     <button className={styles.rectangleContainer}>
                       <div className={styles.frameInner} />
-                      <div className={styles.gallery2}>Gallery</div>
+                      <div className={styles.gallery2}><Link to={"/gallery"}>Gallery</Link></div>
                     </button>
                   </div>
                 </div>

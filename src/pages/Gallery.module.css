@@ -12,6 +12,10 @@
 .home {
   min-width: 68px;
 }
+.home a{
+  text-decoration: none;
+  color: inherit;
+}
 .homeWrapper {
   display: flex;
   flex-direction: column;
@@ -95,6 +99,7 @@
   margin-block-start: 0;
   margin-block-end: 20px;
 }
+
 .weHaveSolutions {
   margin: 0;
   font-family: var(--material-2-secondary-text);

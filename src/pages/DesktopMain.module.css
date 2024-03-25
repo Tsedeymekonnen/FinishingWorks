@@ -64,6 +64,7 @@
 }
 .home {
   min-width: 68px;
+  
 }
 .homeWrapper {
   display: flex;
@@ -88,13 +89,28 @@
     var(--padding-0);
 }
 .service,
-.testimonials {
+.testimonials
+{
   position: relative;
   letter-spacing: 0.16px;
   line-height: 25.2px;
   display: inline-block;
   min-width: 92px;
+ 
 }
+.home a,
+.service a,
+.dashboard a,
+.gallery a,
+.testimonials a {
+  text-decoration: none; /* Remove underline */
+  margin-right: 20px; /* Add gap between elements */
+  color: inherit;
+}
+.dashboard {
+ margin-left: 50px;
+}
+
 .testimonials {
   flex: 1;
   min-width: 106px;
@@ -105,11 +121,13 @@
   flex-direction: row;
   align-items: flex-start;
   max-width: 100%;
+  
 }
 .frameContainer {
   width: 562px;
   justify-content: flex-start;
   gap: var(--gap-8xl);
+  
 }
 .frameWrapper {
   align-self: stretch;
@@ -151,6 +169,10 @@
   display: inline-block;
   min-width: 92px;
   z-index: 3;
+}
+.gallery1 a{
+  text-decoration: none;
+  color: inherit;
 }
 .rectangleGroup,
 .rectangleParent {
@@ -500,6 +522,10 @@
   flex-shrink: 0;
   min-width: 83.5px;
   z-index: 1;
+}
+.gallery2 a{
+  text-decoration: none;
+  color: inherit;
 }
 .frameWrapper2,
 .rectangleContainer {

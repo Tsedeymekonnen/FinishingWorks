@@ -80,8 +80,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Gallery />} />
-      <Route path="/desktop-main" element={<DesktopMain />} />
+      <Route path="/" element={<DesktopMain />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="/dashboard" element={<Dashboard />} />

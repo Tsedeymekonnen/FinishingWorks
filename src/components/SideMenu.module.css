@@ -44,6 +44,7 @@
   font-weight: 600;
   font-family: inherit;
 }
+
 .v01 {
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -84,6 +85,10 @@
   min-width: 78px;
   z-index: 1;
 }
+.dashboard1 a{
+  text-decoration: none;
+  color: inherit;
+}
 .frameWrapper,
 .icon24OutlineKeySquaParent {
   display: flex;
@@ -109,6 +114,10 @@
   flex-shrink: 0;
   debug_commit: f6aba90;
   z-index: 1;
+}
+.gallery a{
+  text-decoration: none;
+  color: inherit;
 }
 .galleryWrapper {
   display: flex;

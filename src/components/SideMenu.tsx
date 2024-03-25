@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import styles from "./SideMenu.module.css";
+import { Link } from "react-router-dom";
 
 const SideMenu: FunctionComponent = () => {
   return (
@@ -30,12 +31,12 @@ const SideMenu: FunctionComponent = () => {
               alt=""
               src="/icon--24--outline--keysquare1.svg"
             />
-            <div className={styles.dashboard1}>Dashboard</div>
+            <div className={styles.dashboard1}><Link to={"/dashboard"}>Dashboard</Link></div>
           </div>
         </div>
         <div className={styles.frameContainer}>
           <div className={styles.galleryWrapper}>
-            <div className={styles.gallery}>Gallery</div>
+            <div className={styles.gallery}><Link to={"/gallery"}>Gallery</Link></div>
           </div>
           <div className={styles.rectangleParent}>
             <div className={styles.frameChild} />

@@ -3,6 +3,7 @@ import FrameComponent1 from "../components/FrameComponent1";
 import FrameComponent from "../components/FrameComponent";
 import GroupComponent from "../components/GroupComponent";
 import styles from "./Gallery.module.css";
+import { Link } from "react-router-dom";
 
 const Gallery: FunctionComponent = () => {
   return (
@@ -12,7 +13,7 @@ const Gallery: FunctionComponent = () => {
           <div className={styles.fyn}>FYN</div>
           <nav className={styles.frameParent}>
             <div className={styles.homeWrapper}>
-              <div className={styles.home}>HOME</div>
+              <div className={styles.home}><Link to={"/"}>HOME</Link></div>
             </div>
             <div className={styles.galleryWrapper}>
               <div className={styles.gallery1}>GALLERY</div>
