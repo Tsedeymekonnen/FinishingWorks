@@ -1,0 +1,169 @@
+.frameChild {
+  height: 79px;
+  width: 1440px;
+  position: relative;
+  background-color: var(--color-midnightblue);
+  display: none;
+  max-width: 100%;
+}
+.div,
+.subTreeIcon {
+  position: relative;
+  z-index: 1;
+}
+.subTreeIcon {
+  height: 42px;
+  width: 42px;
+}
+.div {
+  letter-spacing: 0.16px;
+  line-height: 26px;
+  white-space: nowrap;
+}
+.connectedComponents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-10xs) 0 0;
+}
+.treeTrunkIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+}
+.treeTrunkWrapper {
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-smi) 0 0;
+  box-sizing: border-box;
+}
+.frameIcon,
+.vectorIcon {
+  position: relative;
+  z-index: 1;
+}
+.frameIcon {
+  height: 34px;
+  width: 39px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.vectorIcon {
+  width: 24px;
+  height: 24px;
+}
+.frameParent,
+.vectorWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vectorWrapper {
+  height: 26px;
+  flex-direction: column;
+  padding: var(--padding-11xs) 0 0;
+  box-sizing: border-box;
+}
+.frameParent {
+  height: 34px;
+  flex-direction: row;
+  gap: var(--gap-9xs);
+}
+.branchingOut {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) 0 0;
+}
+.branchingOut,
+.frameWrapper,
+.subTreeParent {
+  display: flex;
+  align-items: flex-start;
+}
+.subTreeParent {
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-smi);
+}
+.frameWrapper {
+  height: 49px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-8xs);
+  box-sizing: border-box;
+}
+.bookYourFree {
+  position: relative;
+  letter-spacing: 0.16px;
+  line-height: 25.2px;
+  white-space: nowrap;
+  z-index: 1;
+}
+.bookYourFreeConsultationWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.vectorIcon1 {
+  height: 42px;
+  width: 42px;
+  position: relative;
+  z-index: 1;
+}
+.frameGroup,
+.rectangleParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-39xl);
+  max-width: 100%;
+  font-size: var(--font-size-xl);
+}
+.rectangleParent {
+  align-self: stretch;
+  background-color: var(--color-midnightblue);
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--padding-mini) var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-332xl);
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--white);
+  font-family: var(--font-lora);
+}
+@media screen and (max-width: 1200px) {
+  .rectangleParent {
+    gap: 351px 175px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bookYourFree {
+    display: none;
+  }
+  .rectangleParent {
+    gap: 351px 88px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .frameGroup {
+    gap: 58px 29px;
+  }
+  .rectangleParent {
+    gap: 351px 44px;
+  }
+}

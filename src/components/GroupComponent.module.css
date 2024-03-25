@@ -1,0 +1,357 @@
+.rectangle,
+.rectangle1 {
+  align-self: stretch;
+  position: relative;
+}
+.rectangle {
+  height: 594.9px;
+  background-color: var(--color-midnightblue);
+  display: none;
+}
+.rectangle1 {
+  margin-top: -1.099999999999909px;
+  height: 1px;
+  background-color: var(--color-gray-300);
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.rectangle2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.aboutUs {
+  margin: 0;
+  width: 133.2px;
+  position: relative;
+  font-size: inherit;
+  line-height: 39px;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 2;
+}
+.craftingExcellenceThrough {
+  margin: 0;
+}
+.craftingExcellenceThroughContainer {
+  align-self: stretch;
+  height: 172.3px;
+  position: relative;
+  font-size: var(--material-2-title-size);
+  line-height: 20px;
+  font-family: var(--material-2-secondary-text);
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.aboutUsParent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 31.700000000000273px;
+  min-width: 265px;
+  max-width: 100%;
+}
+.contactInfo {
+  margin: 0;
+  width: 181.2px;
+  position: relative;
+  font-size: inherit;
+  line-height: 39px;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 2;
+}
+.div,
+.fyngmailcom,
+.rdFloorSomewhere {
+  position: relative;
+  line-height: 34.9px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.rdFloorSomewhere {
+  align-self: stretch;
+  white-space: pre-wrap;
+  z-index: 2;
+}
+.div,
+.fyngmailcom {
+  display: inline-block;
+  margin-top: -0.55px;
+}
+.div {
+  min-width: 96px;
+  z-index: 3;
+}
+.fyngmailcom {
+  width: 247.2px;
+  z-index: 4;
+}
+.rdFloorSomewhereAddisAbabParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-mid);
+  color: var(--white);
+  font-family: var(--material-2-secondary-text);
+}
+.contactInfoParent,
+.frameDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.contactInfoParent {
+  width: 349.2px;
+  flex-direction: column;
+  gap: 25.600000000000364px;
+  min-width: 349.2000000000007px;
+  color: var(--color-whitesmoke-100);
+}
+.frameDiv {
+  width: 825.6px;
+  flex-direction: row;
+  gap: 68.39999999999964px;
+}
+.ourCompany {
+  margin: 0;
+  width: 200.4px;
+  position: relative;
+  font-size: inherit;
+  line-height: 39px;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 2;
+}
+.contact,
+.testimonials {
+  position: relative;
+  line-height: 35px;
+  z-index: 2;
+}
+.testimonials {
+  width: 117px;
+  display: inline-block;
+}
+.contact {
+  align-self: stretch;
+  white-space: pre-wrap;
+}
+.gallery {
+  position: relative;
+  font-size: var(--material-2-title-size);
+  line-height: 34.9px;
+  display: inline-block;
+  min-width: 49px;
+  z-index: 3;
+  margin-top: -2.5px;
+}
+.contactParent {
+  align-self: stretch;
+  font-size: var(--font-size-mid);
+}
+.contactParent,
+.dataCollector,
+.ourCompanyParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.dataCollector {
+  align-self: stretch;
+  gap: var(--gap-12xs);
+  font-size: var(--material-2-title-size);
+  color: var(--white);
+  font-family: var(--material-2-secondary-text);
+}
+.ourCompanyParent {
+  width: 210.4px;
+  gap: 25.800000000000185px;
+  color: var(--color-whitesmoke-100);
+}
+.frameContainer,
+.frameGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frameGroup {
+  width: 1162px;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.frameContainer {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.alignmentEngineIcon,
+.alignmentEngineIcon1,
+.alignmentEngineIcon2 {
+  height: 18.5px;
+  width: 21.6px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 19px;
+  z-index: 2;
+}
+.colorCoordinator {
+  height: 18.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14.399999999999636px;
+  margin-top: -21.5px;
+}
+.frameParent,
+.frameWrapper {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frameParent {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.frameWrapper {
+  width: 1279.2px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 var(--padding-17xl);
+  box-sizing: border-box;
+}
+.rectangle3,
+.rectangleGroup {
+  align-self: stretch;
+  position: relative;
+}
+.rectangle3 {
+  height: 1px;
+  background-color: var(--color-gray-400);
+  z-index: 2;
+}
+.rectangleGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 123.09999999999992px 0 0.09999999999990904px;
+  gap: 127.19999999999982px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+}
+.layerLiaison {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.copyright2024 {
+  width: 405.6px;
+  position: relative;
+  line-height: 34.9px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+  z-index: 3;
+}
+.layerLiaisonParent,
+.rectangleParent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.layerLiaisonParent {
+  flex-direction: row;
+  padding: 33.80000000000018px var(--padding-17xl) 31.799999999999727px;
+  position: relative;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+  font-size: var(--font-size-mid);
+  font-family: var(--material-2-secondary-text);
+}
+.rectangleParent {
+  background-color: var(--color-midnightblue);
+  flex-direction: column;
+  gap: 0.049999999999954525px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--white);
+  font-family: var(--font-raleway);
+}
+@media screen and (max-width: 1200px) {
+  .frameGroup {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .frameDiv {
+    gap: 68.4px 34px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .contactInfoParent {
+    flex: 1;
+  }
+  .frameDiv {
+    flex-wrap: wrap;
+  }
+  .rectangleGroup {
+    gap: 64px 127.2px;
+    padding-top: var(--padding-61xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .aboutUs {
+    font-size: var(--font-size-xl);
+    line-height: 30px;
+  }
+  .aboutUsParent {
+    gap: 16px 31.7px;
+  }
+  .contactInfo {
+    font-size: var(--font-size-xl);
+    line-height: 30px;
+  }
+  .contactInfoParent {
+    min-width: 100%;
+  }
+  .frameDiv {
+    gap: 68.4px 17px;
+  }
+  .ourCompany {
+    font-size: var(--font-size-xl);
+    line-height: 30px;
+  }
+  .rectangleGroup {
+    gap: 32px 127.2px;
+  }
+}

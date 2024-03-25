@@ -1,0 +1,26 @@
+.submit {
+  position: relative;
+  font-size: var(--material-2-title-size);
+  letter-spacing: -0.01em;
+  display: inline-block;
+  font-family: var(--font-inter);
+  color: var(--white);
+  text-align: left;
+  min-width: 55px;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-sm) var(--padding-17xl);
+  background-color: var(--color-midnightblue);
+  border-radius: var(--br-7xs);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.button:hover {
+  background-color: var(--color-royalblue);
+}
