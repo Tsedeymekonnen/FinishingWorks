@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
 import FrameComponent3 from "../components/FrameComponent3";
 import RuleEvaluator from "../components/RuleEvaluator";
-import FrameComponent1 from "../components/FrameComponent1";
-import FrameComponent from "../components/FrameComponent";
-import GroupComponent from "../components/GroupComponent";
+import FrameComponent11 from "../components/FrameComponent11";
+import FrameComponent2 from "../components/FrameComponent4";
+import GroupComponent1 from "../components/GroupComponent1";
 import styles from "./DesktopMain.module.css";
 
 const DesktopMain: FunctionComponent = () => {
@@ -15,7 +15,7 @@ const DesktopMain: FunctionComponent = () => {
         src="/rectangle-2@2x.png"
       />
       <div className={styles.div}>
-        <img className={styles.imageIcon} alt="" src="/image@2x.png" />
+        <img className={styles.imageIcon} alt="" src="/image4@2x.png" />
         <div className={styles.ceramicInstallation}>ceramic installation</div>
         <div className={styles.expertCeramicInstallation}>
           Expert ceramic installation, enhancing spaces with durability and
@@ -108,7 +108,7 @@ const DesktopMain: FunctionComponent = () => {
                     className={styles.imageIcon3}
                     loading="lazy"
                     alt=""
-                    src="/image@2x.png"
+                    src="/image4@2x.png"
                   />
                   <div className={styles.child}>
                     <div className={styles.ceramicInstallationParent}>
@@ -135,7 +135,7 @@ const DesktopMain: FunctionComponent = () => {
                   <img
                     className={styles.imageIcon5}
                     alt=""
-                    src="/image@2x.png"
+                    src="/image5@2x.png"
                   />
                   <img
                     className={styles.iterativeContainerChild}
@@ -173,9 +173,9 @@ const DesktopMain: FunctionComponent = () => {
           </div>
         </div>
       </section>
-      <FrameComponent1 />
-      <FrameComponent />
-      <GroupComponent />
+      <FrameComponent11 />
+      <FrameComponent2 />
+      <GroupComponent1 />
     </div>
   );
 };

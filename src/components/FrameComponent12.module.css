@@ -1,0 +1,92 @@
+.ourService {
+  width: 91px;
+  position: relative;
+  letter-spacing: 0.16px;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 91px;
+}
+.sequenceProcessor {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-0) var(--padding-xl) var(--padding-0)
+    var(--padding-2xl);
+}
+.imageIcon {
+  width: 304px;
+  height: 198px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.painting {
+  width: 128px;
+  position: relative;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.precisionPaintingService {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--material-2-secondary-text-size);
+  color: var(--color-dimgray-100);
+}
+.reducer {
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-7xs);
+}
+.hierarchyBuilder,
+.mapper,
+.reducer {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-5xl);
+}
+.hierarchyBuilder {
+  flex: 1;
+  border-radius: var(--br-xs);
+  background-color: var(--white);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-0) var(--padding-0) var(--padding-5xl);
+  gap: var(--gap-5xl);
+  text-align: left;
+  font-size: var(--font-size-lg);
+}
+.dataMerger,
+.functionCaller,
+.hierarchyBuilder {
+  align-self: stretch;
+  display: flex;
+}
+.dataMerger {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-8xl);
+}
+.functionCaller {
+  height: 398px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-0) var(--padding-31xl) var(--padding-xl);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--material-2-title-size);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

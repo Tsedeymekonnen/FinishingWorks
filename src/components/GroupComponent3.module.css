@@ -1,0 +1,295 @@
+.frameChild,
+.frameItem {
+  align-self: stretch;
+  height: 479px;
+  position: relative;
+  background-color: var(--color-gainsboro-100);
+  display: none;
+}
+.frameItem {
+  height: 489px;
+  background-color: var(--color-midnightblue);
+}
+.aboutUs {
+  width: 91px;
+  position: relative;
+  line-height: 38px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-right: var(--padding-xl);
+  z-index: 2;
+}
+.craftingExcellenceThrough {
+  margin: 0;
+}
+.craftingExcellenceThroughContainer {
+  align-self: stretch;
+  height: 68px;
+  position: relative;
+  font-size: var(--font-size-smi);
+  line-height: 20px;
+  font-family: var(--material-2-secondary-text);
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.loopManager,
+.variableVault {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.variableVault {
+  flex: 1;
+  flex-direction: column;
+}
+.loopManager {
+  width: 248px;
+  flex-direction: row;
+  padding: var(--padding-0) var(--padding-sm);
+  box-sizing: border-box;
+}
+.contactInfo {
+  width: 187.5px;
+  position: relative;
+  font-size: var(--material-2-title-size);
+  line-height: 39px;
+  font-family: var(--font-raleway);
+  color: var(--color-whitesmoke-100);
+  display: inline-block;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+  z-index: 2;
+}
+.expressionExplorer,
+.fyngmailcom,
+.rdFloorSomewhere {
+  position: relative;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+  z-index: 2;
+  margin-top: -6.97px;
+}
+.rdFloorSomewhere {
+  align-self: stretch;
+  line-height: 35px;
+  white-space: pre-wrap;
+}
+.expressionExplorer,
+.fyngmailcom {
+  line-height: 34.9px;
+}
+.expressionExplorer {
+  width: 93px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-right: var(--padding-xl);
+}
+.fyngmailcom {
+  align-self: stretch;
+}
+.errorHandler,
+.eventExecutor {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.eventExecutor {
+  flex: 1;
+  flex-direction: column;
+}
+.errorHandler {
+  width: 256.5px;
+  flex-direction: row;
+  padding: var(--padding-0) var(--padding-sm) 12.099999999999907px;
+  box-sizing: border-box;
+  font-size: var(--font-size-smi);
+  font-family: var(--material-2-secondary-text);
+}
+.ourCompany {
+  flex: 1;
+  position: relative;
+  line-height: 39px;
+  padding-right: var(--padding-0);
+  z-index: 2;
+}
+.transitionTriggler {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-0)
+    var(--padding-11xs);
+}
+.testimonials {
+  position: relative;
+  line-height: 34.9px;
+  display: inline-block;
+  min-width: 75px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+  z-index: 2;
+}
+.signalSender {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-0) var(--padding-12xs) var(--padding-0)
+    var(--padding-0);
+}
+.contact {
+  position: relative;
+  line-height: 34.9px;
+  display: inline-block;
+  min-width: 46px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+  z-index: 2;
+}
+.signalSender1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-0) var(--padding-12xs) var(--padding-0)
+    var(--padding-0);
+  margin-top: -9.9px;
+}
+.gallery {
+  position: relative;
+  line-height: 34.9px;
+  display: inline-block;
+  min-width: 40px;
+  flex-shrink: 0;
+  debug_commit: f6aba90;
+  z-index: 3;
+  margin-top: -9.9px;
+}
+.connectionController,
+.transitionTrigglerParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.connectionController {
+  padding: var(--padding-0) var(--padding-xl) var(--padding-0) var(--padding-0);
+  margin-top: -3px;
+  font-size: var(--font-size-smi);
+  color: var(--white);
+  font-family: var(--material-2-secondary-text);
+}
+.transitionTrigglerParent {
+  flex: 1;
+}
+.eventEmitterIcon {
+  width: 24px;
+  height: 23px;
+  position: relative;
+  z-index: 3;
+}
+.errorHandler1 {
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+}
+.conditionCombinerIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 39px;
+  height: 34px;
+  overflow: hidden;
+  z-index: 2;
+}
+.sequenceSequencerIcon {
+  position: absolute;
+  top: 4px;
+  left: 32px;
+  width: 24px;
+  height: 23px;
+  z-index: 3;
+}
+.signalRouter {
+  height: 34px;
+  flex: 1;
+  position: relative;
+}
+.performanceTracker {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-2xs);
+}
+.controlCenter,
+.errorEliminator,
+.parameterProcessor,
+.performanceTracker {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.errorEliminator {
+  width: 91px;
+  flex-direction: column;
+  padding: var(--padding-8xs) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  margin-left: -0.2px;
+}
+.controlCenter,
+.parameterProcessor {
+  flex-direction: row;
+}
+.controlCenter {
+  flex: 1;
+}
+.parameterProcessor {
+  width: 302px;
+  padding: var(--padding-0) var(--padding-xs) 9.099999999999907px;
+  box-sizing: border-box;
+  color: var(--color-whitesmoke-100);
+}
+.dataDistributor {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  background-color: var(--color-gray-400);
+  z-index: 4;
+}
+.copyright2024 {
+  flex: 1;
+  position: relative;
+  line-height: 35px;
+  z-index: 2;
+}
+.copyright2024FynFinishingWrapper,
+.rectangleParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.copyright2024FynFinishingWrapper {
+  width: 275px;
+  flex-direction: row;
+  padding: var(--padding-0) var(--padding-8xs);
+  box-sizing: border-box;
+  font-size: var(--font-size-smi);
+  font-family: var(--material-2-secondary-text);
+}
+.rectangleParent {
+  align-self: stretch;
+  background-color: var(--color-midnightblue);
+  flex-direction: column;
+  padding: var(--padding-14xl) var(--padding-0) var(--padding-2xs);
+  gap: var(--gap-4xs);
+  z-index: 1;
+  text-align: left;
+  font-size: var(--material-2-title-size);
+  color: var(--white);
+  font-family: var(--font-raleway);
+}

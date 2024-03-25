@@ -1,7 +1,7 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
 import styles from "./FrameComponent2.module.css";
 
-export type FrameComponent2Type = {
+export type FrameComponent21Type = {
   star2?: string;
   star3?: string;
   star4?: string;
@@ -19,7 +19,7 @@ export type FrameComponent2Type = {
   propMinWidth?: CSSProperties["minWidth"];
 };
 
-const FrameComponent2: FunctionComponent<FrameComponent2Type> = ({
+const FrameComponent21: FunctionComponent<FrameComponent21Type> = ({
   star2,
   star3,
   star4,
@@ -96,4 +96,4 @@ const FrameComponent2: FunctionComponent<FrameComponent2Type> = ({
   );
 };
 
-export default FrameComponent2;
+export default FrameComponent21;

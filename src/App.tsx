@@ -5,7 +5,13 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+import Gallery from "./pages/Gallery";
 import DesktopMain from "./pages/DesktopMain";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import Dashboard from "./pages/Dashboard";
+import Dashboard1 from "./pages/Dashboard1";
+import MobileHome from "./pages/MobileHome";
 
 function App() {
   const action = useNavigationType();
@@ -27,6 +33,30 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/desktop-main":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/sign-up":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/sign-in":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/dashboard":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/dashboard1":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/mobile-home":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -45,7 +75,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<DesktopMain />} />
+      <Route path="/" element={<Gallery />} />
+      <Route path="/desktop-main" element={<DesktopMain />} />
+      <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard1" element={<Dashboard1 />} />
+      <Route path="/mobile-home" element={<MobileHome />} />
     </Routes>
   );
 }

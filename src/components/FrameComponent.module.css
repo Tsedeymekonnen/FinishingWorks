@@ -1,163 +1,149 @@
-.frameChild {
-  width: 598px;
-  height: 495px;
+.ceramicShowcase {
   position: relative;
-  background-color: var(--white);
-  display: none;
-  max-width: 100%;
+  letter-spacing: 0.16px;
+  line-height: 26px;
 }
-.connectUs {
-  margin: 0;
-  position: relative;
-  font-size: var(--font-size-13xl);
-  font-weight: 700;
-  font-family: var(--font-inter);
-  color: var(--color-black);
-  white-space: pre-wrap;
-  text-align: left;
-  z-index: 1;
-}
-.dataAggregator {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-10xs);
-}
-.fillTheForm {
-  position: relative;
-  font-size: var(--font-size-lg);
-  letter-spacing: 0.01em;
-  font-weight: 500;
-  font-family: var(--font-inter);
-  color: var(--color-gray-100);
-  text-align: left;
-  z-index: 1;
-}
-.booleanOperator,
-.ifStatement {
+.image {
   align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.booleanOperator {
-  padding: 0 var(--padding-12xs) 0 var(--padding-11xs);
-}
-.ifStatement {
-  gap: var(--gap-mid);
-}
-.ifStatementParent {
-  align-self: stretch;
-  flex-direction: column;
-  gap: var(--gap-base);
-}
-.buttonWrapper,
-.ifStatementParent,
-.numberCruncher,
-.rectangleParent {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.numberCruncher {
-  align-self: stretch;
-  flex-direction: column;
-  padding: 0 0 var(--padding-14xl);
-  gap: var(--gap-6xl);
-}
-.buttonWrapper,
-.rectangleParent {
-  flex-direction: row;
-  padding: 0 var(--padding-5xs);
-}
-.rectangleParent {
-  margin: 0;
-  flex: 1;
-  background-color: var(--white);
-  flex-direction: column;
-  padding: var(--padding-77xl) var(--padding-59xl) var(--padding-90xl)
-    var(--padding-60xl);
-  gap: var(--gap-2xs);
+  height: 226px;
+  overflow: hidden;
   flex-shrink: 0;
-  debug_commit: f6aba90;
-}
-.contactForm5,
-.contactForm5Wrapper {
   display: flex;
-  align-items: flex-start;
-  max-width: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-mini) var(--padding-6xl);
+  box-sizing: border-box;
+  background-image: url(/public/image@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  white-space: nowrap;
 }
-.contactForm5 {
+.ceramicSymmetry {
+  position: relative;
+  letter-spacing: 0.16px;
+  line-height: 25.2px;
+}
+.image1,
+.imageParent {
+  display: flex;
+  justify-content: flex-start;
+}
+.image1 {
   align-self: stretch;
-  height: 465px;
-  background: linear-gradient(#fff, #fff), #fff;
+  height: 226px;
   overflow: hidden;
   flex-shrink: 0;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: flex-end;
+  padding: var(--padding-2xl) var(--padding-mini);
+  box-sizing: border-box;
+  background-image: url(/public/image1@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  white-space: nowrap;
 }
-.contactForm5Wrapper {
+.imageParent {
   flex: 1;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-18xl);
-  box-sizing: border-box;
-  min-width: 383px;
-}
-.desktopMainInner,
-.frameParent {
-  display: flex;
-  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-14xl);
+  min-width: 290px;
   max-width: 100%;
 }
-.frameParent {
-  width: 1185px;
+.expertTouch {
+  position: relative;
+  letter-spacing: 0.16px;
+  line-height: 26px;
+  display: inline-block;
+  min-width: 128px;
+}
+.image2 {
+  align-self: stretch;
+  height: 226px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: var(--gap-xl);
+  padding: var(--padding-lg) 22.699999999999815px;
+  box-sizing: border-box;
+  background-image: url(/public/image2@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  white-space: nowrap;
 }
-.desktopMainInner {
-  width: 1355px;
+.paintedPerfection {
+  position: relative;
+  letter-spacing: 0.16px;
+  line-height: 25.2px;
+}
+.image3 {
+  align-self: stretch;
+  height: 226px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-3xl) var(--padding-xl);
+  box-sizing: border-box;
+  background-image: url(/public/image3@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  white-space: nowrap;
+}
+.frameParent,
+.galleryInner,
+.imageGroup {
+  display: flex;
   align-items: flex-start;
+  max-width: 100%;
+}
+.imageGroup {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-14xl);
+  min-width: 290px;
+}
+.frameParent,
+.galleryInner {
+  flex-direction: row;
   justify-content: center;
-  padding: 0 var(--padding-xl) 69.09999999999991px;
+}
+.frameParent {
+  width: 928px;
+  flex-wrap: wrap;
+  gap: 36.60000000000037px;
+}
+.galleryInner {
+  align-self: stretch;
+  padding: var(--padding-0) var(--padding-xl) 45.10000000000037px;
   box-sizing: border-box;
   text-align: left;
-  font-size: var(--material-2-overline-size);
-  color: var(--color-gray-200);
-  font-family: var(--material-2-secondary-text);
-}
-@media screen and (max-width: 1050px) {
-  .connectUs {
-    font-size: var(--font-size-7xl);
-  }
-  .frameParent {
-    flex-wrap: wrap;
-  }
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-lora);
 }
 @media screen and (max-width: 750px) {
-  .ifStatement {
-    flex-wrap: wrap;
-  }
-  .rectangleParent {
-    padding: var(--padding-43xl) var(--padding-20xl) var(--padding-52xl);
-    box-sizing: border-box;
-  }
-  .contactForm5 {
-    height: auto;
-  }
-  .desktopMainInner {
-    padding-bottom: var(--padding-26xl);
+  .galleryInner {
+    padding-bottom: var(--padding-10xl);
     box-sizing: border-box;
   }
 }
 @media screen and (max-width: 450px) {
-  .connectUs {
-    font-size: var(--font-size-lgi);
+  .imageGroup,
+  .imageParent {
+    gap: 16px 33px;
   }
-  .contactForm5Wrapper {
-    min-width: 100%;
+  .frameParent {
+    gap: var(--gap-lg);
   }
 }

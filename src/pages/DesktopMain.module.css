@@ -70,7 +70,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 var(--padding-7xl) 0 0;
+  padding: var(--padding-0) var(--padding-7xl) var(--padding-0) var(--padding-0);
 }
 .gallery {
   position: relative;
@@ -84,7 +84,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 var(--padding-16xl) 0 0;
+  padding: var(--padding-0) var(--padding-16xl) var(--padding-0)
+    var(--padding-0);
 }
 .service,
 .testimonials {
@@ -108,12 +109,12 @@
 .frameContainer {
   width: 562px;
   justify-content: flex-start;
-  gap: 27px;
+  gap: var(--gap-8xl);
 }
 .frameWrapper {
   align-self: stretch;
   justify-content: flex-end;
-  padding: 0 0 341px;
+  padding: var(--padding-0) var(--padding-0) 341px;
   box-sizing: border-box;
 }
 .frameChild,
@@ -174,7 +175,7 @@
 .vectorWrapper {
   height: 3px;
   flex-direction: row;
-  padding: 0 var(--padding-20xl);
+  padding: var(--padding-0) var(--padding-20xl);
   box-sizing: border-box;
 }
 .frameDiv,
@@ -190,7 +191,7 @@
 }
 .frameDiv {
   flex-direction: row;
-  padding: 0 var(--padding-16xl);
+  padding: var(--padding-0) var(--padding-16xl);
 }
 .ourService {
   margin: 0;
@@ -259,7 +260,7 @@
 .inner {
   align-self: stretch;
   flex-direction: row;
-  padding: 0 var(--padding-5xl);
+  padding: var(--padding-0) var(--padding-5xl);
 }
 .div1,
 .imageIcon2 {
@@ -275,7 +276,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0 0 var(--padding-5xl);
+  padding: var(--padding-0) var(--padding-0) var(--padding-5xl);
   box-sizing: border-box;
   gap: var(--gap-5xl);
 }
@@ -315,7 +316,7 @@
 .treeGraph {
   align-self: stretch;
   flex-direction: row;
-  padding: 0 var(--padding-5xl);
+  padding: var(--padding-0) var(--padding-5xl);
 }
 .networkConnections,
 .rootedTrees {
@@ -327,13 +328,13 @@
   border-radius: var(--br-xs);
   background-color: var(--white);
   overflow: hidden;
-  padding: 0 0 var(--padding-5xl);
+  padding: var(--padding-0) var(--padding-0) var(--padding-5xl);
   gap: var(--gap-5xl);
 }
 .rootedTrees {
   height: 329px;
   width: 304px;
-  padding: var(--padding-9xs) 0 0;
+  padding: var(--padding-9xs) var(--padding-0) var(--padding-0);
   box-sizing: border-box;
 }
 .imageIcon3 {
@@ -370,7 +371,7 @@
   align-self: stretch;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 0 var(--padding-5xl);
+  padding: var(--padding-0) var(--padding-5xl);
 }
 .child,
 .div2,
@@ -388,7 +389,7 @@
   flex-shrink: 0;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0 0 var(--padding-5xl);
+  padding: var(--padding-0) var(--padding-0) var(--padding-5xl);
   box-sizing: border-box;
   gap: var(--gap-5xl);
   z-index: 1;
@@ -406,7 +407,7 @@
 .frameWrapper1 {
   align-self: stretch;
   justify-content: flex-start;
-  padding: 0 0 0 var(--padding-smi);
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-smi);
   box-sizing: border-box;
 }
 .imageIcon4,
@@ -469,7 +470,7 @@
 }
 .iconLibrary {
   flex-direction: row;
-  padding: 0 0 0 var(--padding-9xs);
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-9xs);
   box-sizing: border-box;
 }
 .pathBuilder {
@@ -509,7 +510,8 @@
 .rectangleContainer {
   cursor: pointer;
   border: 1px solid var(--color-midnightblue);
-  padding: var(--padding-xs) var(--padding-xl) var(--padding-xs) 27px;
+  padding: var(--padding-xs) var(--padding-xl) var(--padding-xs)
+    var(--padding-8xl);
   background-color: var(--color-gray-400);
   flex: 1;
   border-radius: var(--br-8xs);
@@ -523,7 +525,8 @@
 .frameWrapper2 {
   width: 322.1px;
   justify-content: flex-end;
-  padding: 0 26.100000000000364px 0 var(--padding-7xl);
+  padding: var(--padding-0) 26.100000000000364px var(--padding-0)
+    var(--padding-7xl);
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -537,13 +540,13 @@
   align-self: stretch;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: 46px;
+  gap: var(--gap-27xl);
 }
 .outputDistributor {
   width: 364px;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 0 0 var(--padding-11xl);
+  padding: var(--padding-0) var(--padding-0) var(--padding-11xl);
   box-sizing: border-box;
   min-width: 364px;
 }
@@ -587,7 +590,7 @@
   width: 1420px;
   flex-direction: row;
   justify-content: center;
-  padding: 0 var(--padding-xl) 158px;
+  padding: var(--padding-0) var(--padding-xl) 158px;
   box-sizing: border-box;
   max-width: 100%;
   font-size: var(--font-size-xl);
