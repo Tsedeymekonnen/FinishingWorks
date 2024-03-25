@@ -42,14 +42,14 @@ const Dashboard: FunctionComponent = () => {
           <div className={styles.frameGroup}>
             <div className={styles.rectangleParent}>
               <div className={styles.frameChild} />
-              <img className={styles.frameIcon} alt="" src="/frame.svg" />
+              <img className={styles.frameIcon} alt="" src="/frame2.svg" />
               <div className={styles.galleryWrapper}>
                 <div className={styles.gallery1}>Gallery</div>
               </div>
             </div>
             <div className={styles.frameWrapper}>
               <div className={styles.frameContainer}>
-                <img className={styles.frameIcon1} alt="" src="/frame.svg" />
+                <img className={styles.frameIcon1} alt="" src="/frame2.svg" />
                 <div className={styles.galleryContainer}>
                   <div className={styles.gallery2}>Gallery</div>
                 </div>
@@ -121,7 +121,7 @@ const Dashboard: FunctionComponent = () => {
           <div className={styles.frameParent2}>
             <div className={styles.rectangleGroup}>
               <div className={styles.rectangleDiv} />
-              <img className={styles.frameIcon2} alt="" src="/frame.svg" />
+              <img className={styles.frameIcon2} alt="" src="/frame2.svg" />
               <div className={styles.galleryFrame}>
                 <div className={styles.gallery3}>Gallery</div>
               </div>
@@ -132,7 +132,7 @@ const Dashboard: FunctionComponent = () => {
                   className={styles.frameIcon3}
                   loading="lazy"
                   alt=""
-                  src="/frame.svg"
+                  src="/frame2.svg"
                 />
                 <div className={styles.galleryWrapper1}>
                   <div className={styles.gallery4}>Gallery</div>

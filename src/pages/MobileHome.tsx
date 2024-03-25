@@ -66,7 +66,7 @@ const MobileHome: FunctionComponent = () => {
             <img
               className={styles.dataFilterChild}
               alt=""
-              src="/group-303@2x.png"
+              src="/group-3031@2x.png"
             />
           </div>
         </div>

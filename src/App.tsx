@@ -12,6 +12,7 @@ import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
 import Dashboard1 from "./pages/Dashboard1";
 import MobileHome from "./pages/MobileHome";
+import MobileGallery from "./pages/MobileGallery";
 
 function App() {
   const action = useNavigationType();
@@ -57,6 +58,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/mobile-gallery":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -82,6 +87,7 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/dashboard1" element={<Dashboard1 />} />
       <Route path="/mobile-home" element={<MobileHome />} />
+      <Route path="/mobile-gallery" element={<MobileGallery />} />
     </Routes>
   );
 }

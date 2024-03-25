@@ -8,8 +8,8 @@ const FrameComponent9: FunctionComponent = () => {
       <div className={styles.decisionMaker}>
         <FrameComponent10
           title="Diverse Portfolio"
-          group304="/group-304.svg"
-          group305="/group-304.svg"
+          group304="/group-3041.svg"
+          group305="/group-3041.svg"
         />
         <div className={styles.functionScope}>
           <FrameComponent10
