@@ -130,6 +130,84 @@
   color: var(--color-gray-200);
   font-family: var(--material-2-secondary-text);
 }
+.email {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--white);
+  height: 43px;
+  flex: 1;
+  border-radius: var(--br-7xs);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-mini);
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: var(--material-2-title-size);
+  color: var(--color-darkgray);
+  min-width: 138px;
+  z-index: 1;
+}
+.name {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--white);
+  height: 43px;
+  flex: 1;
+  border-radius: var(--br-7xs);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-mini);
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: var(--material-2-title-size);
+  color: var(--color-darkgray);
+  min-width: 138px;
+  z-index: 1;
+}
+.phioneNumber {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--white);
+  align-self: stretch;
+  height: 43px;
+  border-radius: var(--br-7xs);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-mini);
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: var(--material-2-title-size);
+  color: var(--color-darkgray);
+  min-width: 250px;
+  z-index: 1;
+}
+.successMessage {
+  color: green;
+
+}
+
+.errorMessage {
+  color: red;
+}
+.successMessage,
+.errorMessage {
+  font-size: 20px;
+}
 @media screen and (max-width: 1050px) {
   .connectUs {
     font-size: var(--font-size-7xl);
@@ -137,6 +215,9 @@
   .frameParent {
     flex-wrap: wrap;
   }
+}
+.successMessageWrapper {
+  margin-left: 35px;
 }
 @media screen and (max-width: 750px) {
   .ifStatement {
@@ -153,12 +234,21 @@
     padding-bottom: var(--padding-26xl);
     box-sizing: border-box;
   }
+  .successMessage,
+  .errorMessage {
+    font-size: 18px;
 }
+}
+
 @media screen and (max-width: 450px) {
   .connectUs {
     font-size: var(--font-size-lgi);
   }
   .contactForm5Wrapper {
     min-width: 100%;
+  }
+  .successMessage,
+  .errorMessage {
+    font-size: 16px;
   }
 }
