@@ -754,6 +754,8 @@
     line-height: 20px;
   }
 
+
+
   .fynParent,
   .parent {
     flex-wrap: wrap;
@@ -761,6 +763,13 @@
 
   .outputDistributor {
     flex: 1;
+  }
+
+  .frameParent1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 196px;
   }
 
   .listProcessor {
@@ -831,6 +840,13 @@
     line-height: 15px;
     margin-top: 245px;
     margin-left: 50px;
+  }
+
+  .frameParent1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
   }
 
   .frameGroup {
