@@ -1,10 +1,5 @@
-import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Routes, Route, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Gallery from "./pages/Gallery";
 import DesktopMain from "./pages/DesktopMain";
 import SignUp from "./pages/SignUp";
@@ -15,15 +10,14 @@ import MobileHome from "./pages/MobileHome";
 import MobileGallery from "./pages/MobileGallery";
 
 function App() {
-  const action = useNavigationType();
+  const [loggedIn, setLoggedIn] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
   const pathname = location.pathname;
 
   useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     let title = "";
@@ -62,6 +56,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      default:
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -69,7 +67,7 @@ function App() {
     }
 
     if (metaDescription) {
-      const metaDescriptionTag: HTMLMetaElement | null = document.querySelector(
+      const metaDescriptionTag = document.querySelector<HTMLMetaElement>(
         'head > meta[name="description"]'
       );
       if (metaDescriptionTag) {
@@ -78,17 +76,39 @@ function App() {
     }
   }, [pathname]);
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Dummy authentication logic, replace with actual authentication logic
+    const email = e.currentTarget.email.value;
+    const password = e.currentTarget.password.value;
+    if (email === "admin@gmail.com" && password === "12345678") {
+      setLoggedIn(true);
+      navigate("/dashboard"); // Redirect to dashboard after successful login
+    } else {
+      alert("Invalid credentials. Please try again.");
+    }
+  };
+
   return (
     <Routes>
       <Route path="/" element={<DesktopMain />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/sign-in" element={<SignIn />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/dashboard1" element={<Dashboard1 />} />
+      {/* Protect dashboard routes */}
+      <Route
+        path="/dashboard"
+        element={loggedIn ? <Dashboard /> : <Navigate to="/" />}
+      />
+      <Route
+        path="/dashboard1"
+        element={loggedIn ? <Dashboard1 /> : <Navigate to="/sign-in" />}
+      />
       <Route path="/mobile-home" element={<MobileHome />} />
       <Route path="/mobile-gallery" element={<MobileGallery />} />
     </Routes>
   );
 }
+
 export default App;
+

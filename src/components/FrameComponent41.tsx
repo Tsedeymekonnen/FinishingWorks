@@ -1,5 +1,6 @@
-import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import { FunctionComponent, useEffect, useMemo, useState, type CSSProperties } from "react";
 import styles from "./FrameComponent41.module.css";
+import { useNavigate } from "react-router-dom";
 
 export type FrameComponent4Type = {
   /** Style props */
@@ -15,6 +16,11 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
   frameDivWidth1,
   frameDivDisplay,
 }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
   const frameSectionStyle: CSSProperties = useMemo(() => {
     return {
       width: frameDivWidth,
@@ -34,7 +40,23 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
     };
   }, [frameDivWidth1, frameDivDisplay]);
 
-  return (
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (email === "admin@gmail.com" && password === "12345678") {
+      setLoggedIn(true);
+    } else {
+      alert("Invalid credentials. Please try again.");
+    }
+  };
+  useEffect(() => {
+    if (loggedIn) {
+      navigate("/dashboard");
+    }
+  }, [loggedIn, navigate]);
+
+  return loggedIn ? (
+    <div>You are logged in as admin.</div>
+  ) : (
     <section className={styles.signUpInner} style={frameSectionStyle}>
       <div className={styles.frameParent} style={frameDiv1Style}>
         <img
@@ -44,11 +66,11 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
           src="/frame1.svg"
         />
         <div className={styles.formWrapper}>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.welcomeBackParent}>
               <div className={styles.welcomeBack}>Welcome back</div>
               <h2 className={styles.title} style={titleStyle}>
-                Create an account
+                Admin Login
               </h2>
             </div>
             <div className={styles.frameGroup}>
@@ -60,8 +82,10 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
                   <div className={styles.inputText}>
                     <input
                       className={styles.context}
-                      placeholder="abebe@gmail.com"
-                      type="text"
+                      placeholder="admin@example.com"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <div className={styles.iconeyeWrapper}>
                       <img
@@ -83,7 +107,9 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
                     <input
                       className={styles.context1}
                       placeholder="Enter your password"
-                      type="text"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                     <div className={styles.iconeyeContainer}>
                       <img
@@ -97,8 +123,8 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
               </div>
             </div>
             <div className={styles.buttonParent}>
-              <button className={styles.button}>
-                <div className={styles.loginNow}>Create account</div>
+              <button className={styles.button} type="submit">
+                <div className={styles.loginNow}>Login</div>
               </button>
               <button className={styles.button1}>
                 <img
