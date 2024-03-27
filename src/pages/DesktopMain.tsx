@@ -5,7 +5,7 @@ import FrameComponent11 from "../components/FrameComponent11";
 import FrameComponent2 from "../components/FrameComponent4";
 import GroupComponent1 from "../components/GroupComponent1";
 import styles from "./DesktopMain.module.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const DesktopMain: FunctionComponent = () => {
   return (

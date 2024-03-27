@@ -6,6 +6,7 @@
   display: none;
   max-width: 100%;
 }
+
 .whatOurClients {
   width: 221px;
   position: relative;
@@ -14,24 +15,26 @@
   display: inline-block;
   z-index: 1;
 }
+
 .frameContainer {
   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-0) var(--padding-0) var(--padding-0)
-    var(--padding-12xs);
+  padding: var(--padding-0) var(--padding-0) var(--padding-0) var(--padding-12xs);
   box-sizing: border-box;
   max-width: 100%;
   text-align: left;
   color: var(--color-black);
 }
+
 .frameWrapper,
 .whatOurClientsSayParent {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .whatOurClientsSayParent {
   align-self: stretch;
   display: flex;
@@ -39,12 +42,14 @@
   gap: var(--gap-59xl);
   max-width: 100%;
 }
+
 .frameWrapper {
   flex: 1;
   padding: var(--padding-11xl) var(--padding-0) var(--padding-0);
   box-sizing: border-box;
   min-width: 226px;
 }
+
 .desktopMainInner,
 .frameParent,
 .frameWrapper,
@@ -53,6 +58,7 @@
   align-items: flex-start;
   max-width: 100%;
 }
+
 .frameParent {
   flex: 1;
   flex-direction: column;
@@ -60,20 +66,22 @@
   gap: var(--gap-66xl);
   min-width: 225px;
 }
+
 .desktopMainInner,
 .rectangleParent {
   flex-direction: row;
   box-sizing: border-box;
 }
+
 .rectangleParent {
   flex: 1;
   background-color: var(--color-midnightblue);
   flex-wrap: wrap;
   justify-content: center;
-  padding: var(--padding-43xl) 300.2999999999993px var(--padding-26xl)
-    var(--padding-317xl);
+  padding: var(--padding-43xl) 300.2999999999993px var(--padding-26xl) var(--padding-317xl);
   gap: 111.29999999999929px;
 }
+
 .desktopMainInner {
   align-self: stretch;
   justify-content: flex-start;
@@ -83,6 +91,7 @@
   color: var(--white);
   font-family: var(--font-inter);
 }
+
 @media screen and (max-width: 1200px) {
   .rectangleParent {
     gap: var(--gap-37xl);
@@ -91,29 +100,35 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 750px) {
   .rectangleParent {
     gap: var(--gap-9xl);
-    padding: var(--padding-21xl) var(--padding-56xl) var(--padding-10xl)
-      var(--padding-65xl);
+    padding: var(--padding-21xl) var(--padding-56xl) var(--padding-10xl) var(--padding-65xl);
     box-sizing: border-box;
   }
+
   .desktopMainInner {
     padding-bottom: var(--padding-11xl);
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 450px) {
   .whatOurClients {
     font-size: var(--material-2-title-size);
     line-height: 26px;
+    margin-bottom: 20px;
   }
+
   .whatOurClientsSayParent {
     gap: 39px 78px;
   }
+
   .frameParent {
     gap: 42px 85px;
   }
+
   .rectangleParent {
     padding-left: var(--padding-xl);
     padding-right: var(--padding-xl);
