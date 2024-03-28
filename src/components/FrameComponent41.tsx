@@ -1,13 +1,16 @@
-import { FunctionComponent, useEffect, useMemo, useState, type CSSProperties } from "react";
+import React, { FunctionComponent, FormEvent, useState } from "react";
 import styles from "./FrameComponent41.module.css";
-import { useNavigate } from "react-router-dom";
+import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
+import { Link, useNavigate } from "react-router-dom";
 
 export type FrameComponent4Type = {
-  /** Style props */
-  frameDivWidth?: CSSProperties["width"];
-  welcomeBackWidth?: CSSProperties["width"];
-  frameDivWidth1?: CSSProperties["width"];
-  frameDivDisplay?: CSSProperties["display"];
+  frameDivWidth?: string;
+  welcomeBackWidth?: string;
+  frameDivWidth1?: string;
+  frameDivDisplay?: string;
+  handleSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  loggedIn: boolean;
+  setLoggedIn: (loggedIn: boolean) => void;
 };
 
 const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
@@ -15,61 +18,45 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
   welcomeBackWidth,
   frameDivWidth1,
   frameDivDisplay,
+  handleSubmit,
+  loggedIn,
+  setLoggedIn,
 }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  const frameSectionStyle: CSSProperties = useMemo(() => {
-    return {
-      width: frameDivWidth,
-    };
-  }, [frameDivWidth]);
-
-  const frameDiv1Style: CSSProperties = useMemo(() => {
-    return {
-      width: welcomeBackWidth,
-    };
-  }, [welcomeBackWidth]);
-
-  const titleStyle: CSSProperties = useMemo(() => {
-    return {
-      width: frameDivWidth1,
-      display: frameDivDisplay,
-    };
-  }, [frameDivWidth1, frameDivDisplay]);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (email === "admin@gmail.com" && password === "12345678") {
-      setLoggedIn(true);
-    } else {
-      alert("Invalid credentials. Please try again.");
-    }
+  // Function to handle successful Google sign-in
+  const responseGoogle = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+    // Handle Google sign-in response
+    console.log(response);
+    // Here, you can set the loggedIn state and perform any other necessary actions
   };
-  useEffect(() => {
-    if (loggedIn) {
-      navigate("/dashboard");
-    }
-  }, [loggedIn, navigate]);
+
+  // Function to handle failed Google sign-in
+  const responseGoogleError = (error: any) => {
+    // Handle Google sign-in error
+    console.error(error);
+  };
 
   return loggedIn ? (
     <div>You are logged in as admin.</div>
   ) : (
-    <section className={styles.signUpInner} style={frameSectionStyle}>
-      <div className={styles.frameParent} style={frameDiv1Style}>
+    <section className={styles.signUpInner} style={{ width: frameDivWidth }}>
+      <div className={styles.frameParent} style={{ width: welcomeBackWidth }}>
+        <Link to="/">
         <img
           className={styles.frameIcon}
           loading="lazy"
           alt=""
           src="/frame1.svg"
         />
+        </Link>
         <div className={styles.formWrapper}>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.welcomeBackParent}>
               <div className={styles.welcomeBack}>Welcome back</div>
-              <h2 className={styles.title} style={titleStyle}>
+              <h2 className={styles.title} style={{ width: frameDivWidth1, display: frameDivDisplay }}>
                 Admin Login
               </h2>
             </div>
@@ -84,6 +71,7 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
                       className={styles.context}
                       placeholder="admin@example.com"
                       type="email"
+                      name="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -108,6 +96,7 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
                       className={styles.context1}
                       placeholder="Enter your password"
                       type="password"
+                      name="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                     />
@@ -126,20 +115,22 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
               <button className={styles.button} type="submit">
                 <div className={styles.loginNow}>Login</div>
               </button>
-              <button className={styles.button1}>
-                <img
-                  className={styles.icongoogleOriginal}
-                  alt=""
-                  src="/icongoogle--original.svg"
-                />
-                <div className={styles.loginNow1}>Continue with Google</div>
-              </button>
-              <div className={styles.alreadyHaveAnAccountParent}>
+              {/* Google Sign-In Button */}
+              <GoogleLogin
+                clientId="YOUR_GOOGLE_CLIENT_ID"
+                buttonText="Continue with Google"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogleError}
+                cookiePolicy={'single_host_origin'}
+                className={styles.button1}
+              />
+              
+              {/* <div className={styles.alreadyHaveAnAccountParent}>
                 <div className={styles.alreadyHaveAn}>
                   Already have an account ?
                 </div>
                 <div className={styles.logIn}>Log in</div>
-              </div>
+              </div> */}
             </div>
           </form>
         </div>

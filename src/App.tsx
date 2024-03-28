@@ -78,31 +78,34 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Dummy authentication logic, replace with actual authentication logic
-    const email = e.currentTarget.email.value;
-    const password = e.currentTarget.password.value;
+    const form = e.currentTarget;
+    const emailInput = form.email as HTMLInputElement; // Access email input
+    const passwordInput = form.password as HTMLInputElement; // Access password input
+    const email = emailInput.value; // Get email value
+    const password = passwordInput.value; // Get password value
     if (email === "admin@gmail.com" && password === "12345678") {
       setLoggedIn(true);
-      navigate("/dashboard"); // Redirect to dashboard after successful login
+      navigate("/dashboard1"); // Redirect to dashboard after successful login
     } else {
       alert("Invalid credentials. Please try again.");
     }
   };
+  
 
   return (
     <Routes>
       <Route path="/" element={<DesktopMain />} />
       <Route path="/gallery" element={<Gallery />} />
-      <Route path="/sign-up" element={<SignUp />} />
-      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/sign-up" element={<SignUp handleSubmit={handleSubmit} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+      <Route path="/sign-in" element={<SignIn handleSubmit={handleSubmit} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
       {/* Protect dashboard routes */}
       <Route
         path="/dashboard"
-        element={loggedIn ? <Dashboard /> : <Navigate to="/" />}
+        element={loggedIn ? <Dashboard/> : <Navigate to="/" />}
       />
       <Route
         path="/dashboard1"
-        element={loggedIn ? <Dashboard1 /> : <Navigate to="/sign-in" />}
+        element={loggedIn ? <Dashboard1/> : <Navigate to="/sign-in" />}
       />
       <Route path="/mobile-home" element={<MobileHome />} />
       <Route path="/mobile-gallery" element={<MobileGallery />} />
@@ -111,4 +114,3 @@ function App() {
 }
 
 export default App;
-
