@@ -25,17 +25,10 @@ const FrameComponent4: FunctionComponent<FrameComponent4Type> = ({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  // Function to handle successful Google sign-in
   const responseGoogle = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
-    // Handle Google sign-in response
     console.log(response);
-    // Here, you can set the loggedIn state and perform any other necessary actions
   };
-
-  // Function to handle failed Google sign-in
   const responseGoogleError = (error: any) => {
-    // Handle Google sign-in error
     console.error(error);
   };
 
