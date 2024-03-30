@@ -1,15 +1,55 @@
-import { FunctionComponent } from "react";
-import FrameComponent5 from "../components/FrameComponent5";
-import styles from "./Dashboard.module.css";
+import React, { FunctionComponent, useState } from "react";
 import { Link } from "react-router-dom";
+import styles from "./Dashboard.module.css";
+import axios from 'axios';
 
 const Dashboard: FunctionComponent = () => {
+  // State for input values
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState<File | null>(null);
+  const [uploadStatus, setUploadStatus] = useState<string | null>(null);
+
+  // Function to handle file input change
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setImage(e.target.files[0]);
+    }
+  };
+
+  // Function to handle upload
+  const handleUpload = () => {
+    // Create FormData object to append form data
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("description", description);
+    
+    // Check if image is not null before appending
+    if (image !== null) {
+      formData.append("image", image);
+    }
+  
+    // Make a POST request to the API endpoint using Axios
+    axios.post('http://localhost:3001/api/form', formData)
+      .then(response => {
+        // Reset input fields after successful upload
+        setTitle("");
+        setDescription("");
+        setImage(null);
+        setUploadStatus("Upload successful");
+        console.log('Data uploaded successfully');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setUploadStatus("Error uploading data");
+      });
+  };
   return (
     <div className={styles.dashboard}>
       <div className={styles.galleryWeHaveContainer}>
         <p className={styles.gallery}> Gallery</p>
         <p className={styles.weHaveSltions}>
-          We Have Sltions for All Your Related Issues!
+          We Have Solutions for All Your Related Issues!
         </p>
       </div>
       <main className={styles.dashboardHttpsbitlyavi}>
@@ -36,7 +76,9 @@ const Dashboard: FunctionComponent = () => {
                 src="/icon--24--outline--keysquare.svg"
               />
               <div className={styles.dashboardWrapper}>
-                <div className={styles.dashboard2}><Link to={"/dashboard1"}>Dashboard</Link></div>
+                <div className={styles.dashboard2}>
+                  <Link to={"/dashboard1"}>Dashboard</Link>
+                </div>
               </div>
             </div>
           </div>
@@ -83,7 +125,7 @@ const Dashboard: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.postImageWrapper}>
-          <h2 className={styles.postImage}>{`Post Image `}</h2>
+          <h2 className={styles.postImage}>Post Image</h2>
         </div>
         <div className={styles.dashboardHttpsbitlyaviInner}>
           <img className={styles.frameInner} alt="" src="/ellipse-62.svg" />
@@ -115,7 +157,9 @@ const Dashboard: FunctionComponent = () => {
                 src="/icon--24--outline--keysquare.svg"
               />
               <div className={styles.dashboardContainer}>
-                <div className={styles.dashboard4}><Link to={"/dashboard1"}>Dashboard</Link></div>
+                <div className={styles.dashboard4}>
+                  <Link to={"/dashboard1"}>Dashboard</Link>
+                </div>
               </div>
             </div>
           </div>
@@ -169,7 +213,7 @@ const Dashboard: FunctionComponent = () => {
         <div className={styles.forgot}>Forgot？</div>
         <div className={styles.dashboardHttpsbitlyaviChild}>
           <div className={styles.managePostParent}>
-            <h2 className={styles.managePost}>{`Manage Post  `}</h2>
+            <h2 className={styles.managePost}>Manage Post</h2>
             <div className={styles.titleInputWrapper}>
               <div className={styles.titleInput}>
                 <div className={styles.titleInputInner}>
@@ -181,43 +225,35 @@ const Dashboard: FunctionComponent = () => {
                   />
                 </div>
                 <div className={styles.titleInputChild}>
-                  <div className={styles.frameParent5}>
-                    <div className={styles.frameParent6}>
-                      <FrameComponent5
-                        title="Title"
-                        contextPlaceholder="....."
-                      />
-                      <FrameComponent5
-                        title="Description(optional)"
-                        contextPlaceholder="....."
-                        propAlignSelf="stretch"
-                        propPosition="unset"
-                        propTop="unset"
-                        propLeft="unset"
-                        propWidth="unset"
-                      />
-                    </div>
-                    <div className={styles.frameParent7}>
-                      <div className={styles.uploadImageWrapper}>
-                        <img
-                          className={styles.uploadImageIcon}
-                          loading="lazy"
-                          alt=""
-                          src="/upload-image.svg"
-                        />
-                      </div>
-                      <img
-                        className={styles.frameChild2}
-                        loading="lazy"
-                        alt=""
-                        src="/frame-300.svg"
-                      />
-                    </div>
+                  <label htmlFor="title">Title:</label>
+                  <input
+                    id="title"
+                    type="text"
+                    placeholder="Title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                  />
+                  <label htmlFor="description">Description:</label>
+                  <textarea
+                    id="description"
+                    placeholder="Description(optional)"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                  />
+                  <label htmlFor="image">Image:</label>
+                  <div className={styles.uploadImageWrapper}>
+                    <input
+                      id="image"
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageChange}
+                    />
+                    {image && <div>{image.name}</div>}
                   </div>
                 </div>
                 <div className={styles.buttonLabel}>
-                  <button className={styles.button}>
-                    <div className={styles.loginNow}>Upload</div>
+                  <button className={styles.button} onClick={handleUpload}>
+                    Upload
                   </button>
                 </div>
               </div>
@@ -225,15 +261,6 @@ const Dashboard: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <FrameComponent5
-        title="Add new"
-        contextPlaceholder="Image"
-        propAlignSelf="unset"
-        propPosition="absolute"
-        propTop="237px"
-        propLeft="487px"
-        propWidth="555px"
-      />
       <img
         className={styles.chevronDown2Icon2}
         loading="lazy"

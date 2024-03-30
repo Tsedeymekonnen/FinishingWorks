@@ -39,6 +39,7 @@ const FrameComponent21: FunctionComponent<FrameComponent21Type> = ({
       flex: propFlex,
       minHeight: propMinHeight,
       alignSelf: propAlignSelf,
+      
     };
   }, [propFlex, propMinHeight, propAlignSelf]);
 

@@ -24,6 +24,7 @@ const FrameComponent3: FunctionComponent = () => {
               src="/vector-1.svg"
             />
           </div>
+          
           <div className={styles.branchingOut}>
             <div className={styles.frameParent}>
               <img

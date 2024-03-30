@@ -3,6 +3,7 @@ import styles from "./FrameComponent.module.css";
 
 const FrameComponent: FunctionComponent = () => {
   return (
+    
     <section className={styles.galleryInner}>
       <div className={styles.frameParent}>
         <div className={styles.imageParent}>

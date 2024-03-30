@@ -9,6 +9,7 @@ const FrameComponent1: FunctionComponent = () => {
           <span>{` Design `}</span>
           <span className={styles.showcaseOne}>Showcase one</span>
         </b>
+        
         <div className={styles.frameParent}>
           <div className={styles.imageParent}>
             <div className={styles.image}>
