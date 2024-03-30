@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-
+const cors = require('cors');
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://tsedey:nQBV4BX3Z5asZuvG@cluster0.x7yvsjh.mongodb.net/Gallery", {
   useNewUrlParser: true,
@@ -20,7 +20,7 @@ const FormData = mongoose.model("FormData", formDataSchema, "formdatas");
 
 // Create an instance of the Express application
 const app = express();
-
+app.use(cors());Ff
 // Middleware for parsing JSON data
 app.use(bodyParser.json());
 
@@ -66,6 +66,6 @@ app.delete("/api/formdata/:id", async (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log("Server is listening on port 3000");
+app.listen(3001, () => {
+  console.log("Server is listening on port 3001");
 });

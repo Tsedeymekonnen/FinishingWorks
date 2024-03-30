@@ -3,11 +3,17 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path"); // Required for handling file paths
-
+const cors = require('cors');
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://tsedey:nQBV4BX3Z5asZuvG@cluster0.x7yvsjh.mongodb.net/Gallery", { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch(error => {
+  console.error('Error connecting to MongoDB:', error);
 });
 
 // Define a schema for the form data
@@ -37,7 +43,7 @@ app.use(bodyParser.json());
 
 // Multer configuration for handling file uploads
 const upload = multer({ dest: 'uploads/' }); // Destination folder for uploaded files
-
+app.use(cors());
 // Route for handling form submissions with file upload
 app.post("/api/form", upload.single('image'), (req, res) => {
   // Extract the form data from the request body
@@ -66,6 +72,6 @@ app.post("/api/form", upload.single('image'), (req, res) => {
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Start the server
-app.listen(3000, () => {
-  console.log("Server is listening on port 3000");
+app.listen(3001, () => {
+  console.log("Server is listening on port 3001");
 });
