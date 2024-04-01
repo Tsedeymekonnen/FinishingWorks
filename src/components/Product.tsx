@@ -1,9 +1,38 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { FunctionComponent } from "react";
 import styles from "./Product.module.css";
 
 const Product: FunctionComponent = () => {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await axios.get("http://localhost:5000/api/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
+  const handleRemoveProduct = async (productId) => {
+    try {
+      await axios.delete(`http://localhost:5000/api/products/${productId}`);
+      setProducts(products.filter(product => product._id !== productId));
+      alert("Product removed successfully!");
+    } catch (error) {
+      console.error("Error removing product:", error);
+      alert("Failed to remove product.");
+    }
+  };
   return (
     <div className={styles.product}>
+
       <img className={styles.productChild} alt="" src="/rectangle-30.svg" />
       <div className={styles.allGalleryParent}>
         <h3 className={styles.allGallery}>All Gallery</h3>
@@ -56,118 +85,120 @@ const Product: FunctionComponent = () => {
               <div className={styles.action}>Action</div>
             </div>
           </div>
-          <div className={styles.pathCombineInner}>
-            <div className={styles.lineParent}>
-              <img className={styles.lineIcon} loading="lazy" alt="" />
-              <div className={styles.pathUnion}>
-                <div className={styles.frameContainer}>
-                  <div className={styles.frameDiv}>
-                    <div className={styles.imageRotateParent}>
-                      <div className={styles.imageRotate}>
-                        <div className={styles.marvel}>Marvel</div>
-                      </div>
-                      <div className={styles.shapeScaleY}>
-                        <div className={styles.shapeTransform}>24-10-2024</div>
-                      </div>
-                      <div className={styles.shapeMirrorV}>
-                        <div className={styles.gallery}>Gallery</div>
-                      </div>
-                      <div className={styles.removeWrapper}>
-                        <div className={styles.remove}>Remove</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.lineWrapper}>
-                    <img className={styles.frameChild1} loading="lazy" alt="" />
-                  </div>
-                  <div className={styles.frameWrapper1}>
-                    <div className={styles.frameParent1}>
-                      <div className={styles.marvelWrapper}>
-                        <div className={styles.marvel1}>Marvel</div>
-                      </div>
-                      <div className={styles.wrapper}>
-                        <div className={styles.div}>24-10-2024</div>
-                      </div>
-                      <div className={styles.galleryWrapper}>
-                        <div className={styles.gallery1}>Gallery</div>
-                      </div>
-                      <button className={styles.removeContainer}>
-                        <div className={styles.remove1}>Remove</div>
-                      </button>
-                    </div>
-                  </div>
-                  <div className={styles.lineContainer}>
-                    <img className={styles.frameChild2} loading="lazy" alt="" />
-                  </div>
-                  <div className={styles.frameWrapper2}>
-                    <div className={styles.frameParent2}>
-                      <div className={styles.marvelContainer}>
-                        <div className={styles.marvel2}>Marvel</div>
-                      </div>
-                      <div className={styles.container}>
-                        <div className={styles.div1}>24-10-2024</div>
-                      </div>
-                      <div className={styles.galleryContainer}>
-                        <div className={styles.gallery2}>Gallery</div>
-                      </div>
-                      <button className={styles.removeFrame}>
-                        <div className={styles.remove2}>Remove</div>
-                      </button>
-                    </div>
-                  </div>
-                  <div className={styles.lineFrame}>
-                    <div className={styles.lineDiv} />
-                  </div>
-                  <div className={styles.frameWrapper3}>
-                    <div className={styles.frameParent3}>
-                      <div className={styles.marvelFrame}>
-                        <div className={styles.marvel3}>Marvel</div>
-                      </div>
-                      <div className={styles.frame}>
-                        <div className={styles.div2}>24-10-2024</div>
-                      </div>
-                      <div className={styles.serviceWrapper}>
-                        <div className={styles.service}>Service</div>
-                      </div>
-                      <button className={styles.frameButton}>
-                        <div className={styles.remove3}>Remove</div>
-                      </button>
-                    </div>
-                  </div>
-                  <img className={styles.imageBlurIcon} loading="lazy" alt="" />
-                  <div className={styles.imageBrightness}>
-                    <div className={styles.imageContrast}>
-                      <div className={styles.shapeOpacity}>
-                        <div className={styles.marvelParent}>
-                          <div className={styles.marvel4}>Marvel</div>
-                          <div className={styles.marvel5}>Marvel</div>
+          {products.map((product) => (
+            <div className={styles.pathCombineInner} key={product._id}>
+              <div className={styles.lineParent}>
+                <img className={styles.lineIcon} loading="lazy" alt="" />
+                <div className={styles.pathUnion}>
+                  <div className={styles.frameContainer}>
+                    <div className={styles.frameDiv}>
+                      <div className={styles.imageRotateParent}>
+                        <div className={styles.imageRotate}>
+                          <div className={styles.marvel}>{product._title}</div>
+                        </div>
+                        <div className={styles.shapeScaleY}>
+                          <div className={styles.shapeTransform}>{product._date}</div>
+                        </div>
+                        <div className={styles.shapeMirrorV}>
+                          <div className={styles.gallery}>Gallery</div>
+                        </div>
+                        <div onClick={() => handleRemoveProduct(product._id)} className={styles.removeWrapper}>
+                          <div className={styles.remove}>Remove</div>
                         </div>
                       </div>
-                      <div className={styles.shapeOpacity1}>
-                        <div className={styles.parent}>
-                          <div className={styles.div3}>24-10-2024</div>
-                          <div className={styles.div4}>24-10-2024</div>
+                    </div>
+                    <div className={styles.lineWrapper}>
+                      <img className={styles.frameChild1} loading="lazy" alt="" />
+                    </div>
+                    <div className={styles.frameWrapper1}>
+                      <div className={styles.frameParent1}>
+                        <div className={styles.marvelWrapper}>
+                          <div className={styles.marvel1}>{product._title}</div>
                         </div>
-                      </div>
-                      <div className={styles.dataAggregatorWrapper}>
-                        <div className={styles.dataAggregator}>
-                          <div className={styles.service1}>Service</div>
-                          <div className={styles.service2}>Service</div>
+                        <div className={styles.wrapper}>
+                          <div className={styles.div}>{product._date}</div>
                         </div>
-                      </div>
-                      <div className={styles.valueTransformer}>
-                        <button className={styles.outputCombiner}>
-                          <div className={styles.remove4}>Remove</div>
+                        <div className={styles.galleryWrapper}>
+                          <div className={styles.gallery1}>Gallery</div>
+                        </div>
+                        <button className={styles.removeContainer}>
+                          <div onClick={() => handleRemoveProduct(product._id)} className={styles.remove1}>Remove</div>
                         </button>
-                        <div className={styles.outputCombiner1}>
-                          <img
-                            className={styles.outputCombinerChild}
-                            loading="lazy"
-                            alt=""
-                          />
-                          <button className={styles.errorHandler}>
-                            <div className={styles.remove5}>Remove</div>
+                      </div>
+                    </div>
+                    <div className={styles.lineContainer}>
+                      <img className={styles.frameChild2} loading="lazy" alt="" />
+                    </div>
+                    <div className={styles.frameWrapper2}>
+                      <div className={styles.frameParent2}>
+                        <div className={styles.marvelContainer}>
+                          <div className={styles.marvel2}>Marvel</div>
+                        </div>
+                        <div className={styles.container}>
+                          <div className={styles.div1}>24-10-2024</div>
+                        </div>
+                        <div className={styles.galleryContainer}>
+                          <div className={styles.gallery2}>Gallery</div>
+                        </div>
+                        <button className={styles.removeFrame}>
+                          <div className={styles.remove2}>Remove</div>
+                        </button>
+                      </div>
+                    </div>
+                    <div className={styles.lineFrame}>
+                      <div className={styles.lineDiv} />
+                    </div>
+                    <div className={styles.frameWrapper3}>
+                      <div className={styles.frameParent3}>
+                        <div className={styles.marvelFrame}>
+                          <div className={styles.marvel3}>Marvel</div>
+                        </div>
+                        <div className={styles.frame}>
+                          <div className={styles.div2}>24-10-2024</div>
+                        </div>
+                        <div className={styles.serviceWrapper}>
+                          <div className={styles.service}>Service</div>
+                        </div>
+                        <button className={styles.frameButton}>
+                          <div className={styles.remove3}>Remove</div>
+                        </button>
+                      </div>
+                    </div>
+                    <img className={styles.imageBlurIcon} loading="lazy" alt="" />
+                    <div className={styles.imageBrightness}>
+                      <div className={styles.imageContrast}>
+                        <div className={styles.shapeOpacity}>
+                          <div className={styles.marvelParent}>
+                            <div className={styles.marvel4}>Marvel</div>
+                            <div className={styles.marvel5}>Marvel</div>
+                          </div>
+                        </div>
+                        <div className={styles.shapeOpacity1}>
+                          <div className={styles.parent}>
+                            <div className={styles.div3}>24-10-2024</div>
+                            <div className={styles.div4}>24-10-2024</div>
+                          </div>
+                        </div>
+                        <div className={styles.dataAggregatorWrapper}>
+                          <div className={styles.dataAggregator}>
+                            <div className={styles.service1}>Service</div>
+                            <div className={styles.service2}>Service</div>
+                          </div>
+                        </div>
+                        <div className={styles.valueTransformer}>
+                          <button className={styles.outputCombiner}>
+                            <div className={styles.remove4}>Remove</div>
                           </button>
+                          <div className={styles.outputCombiner1}>
+                            <img
+                              className={styles.outputCombinerChild}
+                              loading="lazy"
+                              alt=""
+                            />
+                            <button className={styles.errorHandler}>
+                              <div className={styles.remove5}>Remove</div>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -175,8 +206,9 @@ const Product: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
+
       </div>
       <div className={styles.productInner}>
         <div className={styles.frameParent4}>
@@ -288,8 +320,11 @@ const Product: FunctionComponent = () => {
             src="/frame-11.svg"
           />
         </div>
+
       </div>
     </div>
+
+
   );
 };
 
